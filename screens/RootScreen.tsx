@@ -18,6 +18,28 @@ export default function RootScreen({ navigation }: RootStackScreenProps<"Root">)
             source={require("../assets/images/profile.png")}
             style={{ width: "100%", height: "100%" }}
           />
+          <View
+            style={{
+              width: 32,
+              height: 32,
+              backgroundColor: "#ffffff",
+              position: "absolute",
+              bottom: -4,
+              right: -4,
+              borderRadius: 16,
+              elevation: 20,
+              shadowColor: "#000",
+              shadowOffset: {
+                width: 0,
+                height: 16,
+              },
+              shadowOpacity: 0.12,
+              shadowRadius: 24,
+              justifyContent: "center",
+              alignItems: "center",
+            }}>
+            <Text>🎉</Text>
+          </View>
         </View>
         <Text style={{ fontSize: 24, marginTop: 16, fontWeight: "500" }}>OSMU는 세상을 구한다</Text>
         <Text
