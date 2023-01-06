@@ -4,7 +4,8 @@
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "web": "npx expo start --web",
-    "custom": "npx expo customize"
+    "custom": "npx expo customize",
+    "build": "npx expo export:web"
   },
   "jest": {
     "preset": "jest-expo"
