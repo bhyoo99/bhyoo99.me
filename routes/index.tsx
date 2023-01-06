@@ -40,7 +40,7 @@ function RootNavigator() {
       <Stack.Screen
         name="Root"
         component={RootScreen}
-        options={{ title: "bhyoo99", headerTitleStyle: { fontSize: 17 } }}
+        options={{ title: "@bhyoo99", headerTitleStyle: { fontSize: 17 } }}
       />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: "Oops!" }} />
       <Stack.Group screenOptions={{ presentation: "modal" }}>
