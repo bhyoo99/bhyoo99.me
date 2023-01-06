@@ -3,11 +3,15 @@
  * https://reactnavigation.org/docs/getting-started
  *
  */
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
-import { ColorSchemeName } from "react-native";
+import { ColorSchemeName, TouchableOpacity } from "react-native";
 
+import { View } from "../components/Themed";
+import Colors from "../constants/Colors";
+import useColorScheme from "../hooks/useColorScheme";
 import ModalScreen from "../screens/ModalScreen";
 import NotFoundScreen from "../screens/NotFoundScreen";
 import RootScreen from "../screens/RootScreen";
@@ -35,12 +39,50 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
 const Stack = createStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
+  const colorScheme = useColorScheme();
+
   return (
     <Stack.Navigator screenOptions={{ headerShadowVisible: false }}>
       <Stack.Screen
         name="Root"
         component={RootScreen}
-        options={{ title: "@bhyoo99", headerTitleStyle: { fontSize: 17 } }}
+        options={{
+          title: "@bhyoo99",
+          headerTitleStyle: { fontSize: 17 },
+          headerRight: () => {
+            return (
+              <View
+                style={{
+                  marginRight: 8,
+                  flexDirection: "row",
+                  backgroundColor: "none",
+                  opacity: 0.6,
+                }}>
+                <TouchableOpacity style={{ marginRight: 8 }}>
+                  <MaterialCommunityIcons
+                    name="github"
+                    size={24}
+                    color={Colors[colorScheme].text}
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity style={{ marginRight: 8 }}>
+                  <MaterialCommunityIcons
+                    name="twitter"
+                    size={24}
+                    color={Colors[colorScheme].text}
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity style={{ marginRight: 8 }}>
+                  <MaterialCommunityIcons
+                    name="linkedin"
+                    size={24}
+                    color={Colors[colorScheme].text}
+                  />
+                </TouchableOpacity>
+              </View>
+            );
+          },
+        }}
       />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: "Oops!" }} />
       <Stack.Group screenOptions={{ presentation: "modal" }}>
