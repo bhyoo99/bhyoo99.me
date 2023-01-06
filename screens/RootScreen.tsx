@@ -24,8 +24,9 @@ export default function RootScreen({ navigation }: RootStackScreenProps<"Root">)
           style={{ fontSize: 17, marginTop: 16, lineHeight: 24 }}
           lightColor="rgba(0, 0, 0, 0.6)"
           darkColor="rgba(255, 255, 255, 0.7)">
-          안녕하세요👋 React-Native 개발자 유병훈입니다.{"\n"}저는 학창시절 UX를 공부하고, 지금은
-          RN/expo 개발자로 활동하고 있습니다.
+          안녕하세요👋 React-Native 개발자 유병훈입니다.{"\n"}
+          학창시절 서비스를 통해 사람들과 소통할 수 있다는 매력에 UX를 전공하고, 설계한 UX를 더
+          심도있게 구현하고자 개발자의 길로 걷게 되었습니다.
         </Text>
       </View>
     </ScrollView>
