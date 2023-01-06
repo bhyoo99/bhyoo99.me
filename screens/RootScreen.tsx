@@ -13,7 +13,7 @@ export default function RootScreen({ navigation }: RootStackScreenProps<"Root">)
         <View
           style={{ width: 80, height: 80, borderRadius: 40 }}
           lightColor="#F5F5F5"
-          darkColor="rgba(128, 128, 128, 0.05)">
+          darkColor="#2e2e2e">
           <Image
             source={require("../assets/images/profile.png")}
             style={{ width: "100%", height: "100%" }}
@@ -21,12 +21,19 @@ export default function RootScreen({ navigation }: RootStackScreenProps<"Root">)
         </View>
         <Text style={{ fontSize: 24, marginTop: 16, fontWeight: "500" }}>OSMU는 세상을 구한다</Text>
         <Text
-          style={{ fontSize: 17, marginTop: 16, lineHeight: 24 }}
-          lightColor="rgba(0, 0, 0, 0.6)"
-          darkColor="rgba(255, 255, 255, 0.7)">
+          style={{ fontSize: 17, marginTop: 16, lineHeight: 26 }}
+          lightColor="#666666"
+          darkColor="#bfbfbf">
           안녕하세요👋 React-Native 개발자 유병훈입니다.{"\n"}
-          학창시절 서비스를 통해 사람들과 소통할 수 있다는 매력에 UX를 전공하고, 설계한 UX를 더
-          심도있게 구현하고자 개발자의 길로 걷게 되었습니다.
+          UX라는 용어가 익숙치 않았던 시절부터 UX를 공부하고, 설계한 UX를 더 심도있게 구현하고자
+          개발자의 길을 걷고 있습니다.
+        </Text>
+        <Text
+          style={{ fontSize: 17, marginTop: 64, lineHeight: 26 }}
+          lightColor="#666666"
+          darkColor="#bfbfbf">
+          극한의 효율성을 좋아해서 OSMU, 자동화에 👀눈이 돌아갑니다.{"\n"}당연히 여기 나오는 UX나
+          인터랙션은 모두 React-Native로만 구현했습니다!
         </Text>
       </View>
     </ScrollView>
