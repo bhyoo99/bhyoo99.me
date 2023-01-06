@@ -7,7 +7,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { NavigationContainer, DefaultTheme, DarkTheme, useTheme } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
-import { ColorSchemeName, TouchableOpacity } from "react-native";
+import { ColorSchemeName, Linking, TouchableOpacity } from "react-native";
 
 import { View } from "../components/Themed";
 import Colors from "../constants/Colors";
@@ -57,13 +57,25 @@ function RootNavigator() {
                   backgroundColor: "none",
                   opacity: 0.75,
                 }}>
-                <TouchableOpacity style={{ marginRight: 8 }}>
+                <TouchableOpacity
+                  style={{ marginRight: 8 }}
+                  onPress={() => {
+                    Linking.openURL("https://github.com/bhyoo99");
+                  }}>
                   <MaterialCommunityIcons name="github" size={24} color={colors.text} />
                 </TouchableOpacity>
-                <TouchableOpacity style={{ marginRight: 8 }}>
+                <TouchableOpacity
+                  style={{ marginRight: 8 }}
+                  onPress={() => {
+                    Linking.openURL("https://twitter.com/bhyoo99");
+                  }}>
                   <MaterialCommunityIcons name="twitter" size={24} color={colors.text} />
                 </TouchableOpacity>
-                <TouchableOpacity style={{ marginRight: 8 }}>
+                <TouchableOpacity
+                  style={{ marginRight: 8 }}
+                  onPress={() => {
+                    Linking.openURL("https://www.linkedin.com/in/bhyoo99");
+                  }}>
                   <MaterialCommunityIcons name="linkedin" size={24} color={colors.text} />
                 </TouchableOpacity>
               </View>
