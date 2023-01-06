@@ -18,7 +18,11 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
   return (
     <NavigationContainer
       linking={LinkingConfiguration}
-      theme={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+      theme={
+        colorScheme === "dark"
+          ? { ...DarkTheme, colors: { ...DarkTheme.colors, card: "#2a2a2a" } }
+          : DefaultTheme
+      }>
       <RootNavigator />
     </NavigationContainer>
   );
