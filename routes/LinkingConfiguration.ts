@@ -14,20 +14,7 @@ const linking: LinkingOptions<RootStackParamList> = {
   config: {
     initialRouteName: "Root",
     screens: {
-      Root: {
-        screens: {
-          TabOne: {
-            screens: {
-              TabOneScreen: "one",
-            },
-          },
-          TabTwo: {
-            screens: {
-              TabTwoScreen: "two",
-            },
-          },
-        },
-      },
+      Root: "/",
       Modal: "modal",
       NotFound: "*",
     },
