@@ -55,7 +55,7 @@ function RootNavigator() {
                   marginRight: 8,
                   flexDirection: "row",
                   backgroundColor: "none",
-                  opacity: 0.6,
+                  opacity: 0.75,
                 }}>
                 <TouchableOpacity style={{ marginRight: 8 }}>
                   <MaterialCommunityIcons name="github" size={24} color={colors.text} />
