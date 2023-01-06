@@ -4,14 +4,13 @@
  *
  */
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native";
+import { NavigationContainer, DefaultTheme, DarkTheme, useTheme } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
 import { ColorSchemeName, TouchableOpacity } from "react-native";
 
 import { View } from "../components/Themed";
 import Colors from "../constants/Colors";
-import useColorScheme from "../hooks/useColorScheme";
 import ModalScreen from "../screens/ModalScreen";
 import NotFoundScreen from "../screens/NotFoundScreen";
 import RootScreen from "../screens/RootScreen";
@@ -39,7 +38,7 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
 const Stack = createStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
-  const colorScheme = useColorScheme();
+  const { colors } = useTheme();
 
   return (
     <Stack.Navigator screenOptions={{ headerShadowVisible: false }}>
@@ -59,25 +58,13 @@ function RootNavigator() {
                   opacity: 0.6,
                 }}>
                 <TouchableOpacity style={{ marginRight: 8 }}>
-                  <MaterialCommunityIcons
-                    name="github"
-                    size={24}
-                    color={Colors[colorScheme].text}
-                  />
+                  <MaterialCommunityIcons name="github" size={24} color={colors.text} />
                 </TouchableOpacity>
                 <TouchableOpacity style={{ marginRight: 8 }}>
-                  <MaterialCommunityIcons
-                    name="twitter"
-                    size={24}
-                    color={Colors[colorScheme].text}
-                  />
+                  <MaterialCommunityIcons name="twitter" size={24} color={colors.text} />
                 </TouchableOpacity>
                 <TouchableOpacity style={{ marginRight: 8 }}>
-                  <MaterialCommunityIcons
-                    name="linkedin"
-                    size={24}
-                    color={Colors[colorScheme].text}
-                  />
+                  <MaterialCommunityIcons name="linkedin" size={24} color={colors.text} />
                 </TouchableOpacity>
               </View>
             );
