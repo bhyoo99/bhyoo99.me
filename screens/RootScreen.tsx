@@ -50,9 +50,9 @@ export default function RootScreen({ navigation }: RootStackScreenProps<"Root">)
           style={{ fontSize: 17, marginTop: 16, lineHeight: 26 }}
           lightColor="#666666"
           darkColor="#bfbfbf">
-          안녕하세요👋 React-Native 개발자 유병훈입니다{"\n"}
-          UX라는 용어가 익숙치 않았던 시절부터 UX를 공부하고, 설계한 UX를 더 심도있게 구현하고자
-          개발자의 길을 걷고 있습니다
+          안녕하세요! React-Native 개발자 유병훈입니다{"\n"}
+          저는 서비스를 사용하는 고객들과 소통할 수 있다는 매력에 UX를 공부하였고, 설계한 UX
+          디테일한 부분까지 직접 구현하고자 개발자의 길을 걷고 있습니다
         </Text>
         <Text
           style={{ fontSize: 17, marginTop: 64, lineHeight: 26 }}
