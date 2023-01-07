@@ -62,21 +62,21 @@ function RootNavigator() {
                   onPress={() => {
                     Linking.openURL("https://github.com/bhyoo99");
                   }}>
-                  <MaterialCommunityIcons name="github" size={24} color={colors.text} />
+                  <MaterialCommunityIcons name="github" size={20} color={colors.text} />
                 </TouchableOpacity>
                 <TouchableOpacity
                   style={{ marginRight: 8 }}
                   onPress={() => {
                     Linking.openURL("https://twitter.com/bhyoo99");
                   }}>
-                  <MaterialCommunityIcons name="twitter" size={24} color={colors.text} />
+                  <MaterialCommunityIcons name="twitter" size={20} color={colors.text} />
                 </TouchableOpacity>
                 <TouchableOpacity
                   style={{ marginRight: 8 }}
                   onPress={() => {
                     Linking.openURL("https://www.linkedin.com/in/bhyoo99");
                   }}>
-                  <MaterialCommunityIcons name="linkedin" size={24} color={colors.text} />
+                  <MaterialCommunityIcons name="linkedin" size={20} color={colors.text} />
                 </TouchableOpacity>
               </View>
             );
