@@ -26,7 +26,8 @@
       }
     },
     "web": {
-      "favicon": "./assets/images/profile.png"
+      "favicon": "./assets/images/profile.png",
+      "lang": "ko"
     }
   }
 }
